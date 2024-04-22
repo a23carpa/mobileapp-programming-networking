@@ -43,9 +43,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         String image = items.get(position).getAuxdata().getImg();
         Log.i("==!", image);
         Picasso.get().load(image).into(holder.image);
-        holder.name.setText("Mountain name: " + items.get(position).getName());
-        holder.location.setText("Location: " + items.get(position).getLocation());
-        holder.meters.setText("Height: " + items.get(position).getHeightInMeters() + " Meters");
+        holder.name.setText(items.get(position).getName());
+        holder.location.setText(items.get(position).getLocation());
+        holder.meters.setText(items.get(position).getHeightInMeters() + " Meters");
         holder.feet.setText( + items.get(position).getHeightinFeet() + " Feet");
     }
 
