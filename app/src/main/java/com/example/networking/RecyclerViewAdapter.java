@@ -1,15 +1,23 @@
 package com.example.networking;
+import static java.lang.Integer.parseInt;
+
 import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
@@ -31,6 +39,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+
+        String image = items.get(position).getAuxdata().getImg();
+        Log.i("==!", image);
+        Picasso.get().load(image).into(holder.image);
         holder.name.setText("Mountain name: " + items.get(position).getName());
         holder.location.setText("Location: " + items.get(position).getLocation());
         holder.meters.setText("Height: " + items.get(position).getHeightInMeters() + " Meters");
@@ -43,6 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        ImageView image;
         TextView name;
         TextView location;
         TextView meters;
@@ -51,6 +64,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
+            image = itemView.findViewById(R.id.imageView);
             name = itemView.findViewById(R.id.nameView);
             location = itemView.findViewById(R.id.locationView);
             meters = itemView.findViewById(R.id.metersView);
