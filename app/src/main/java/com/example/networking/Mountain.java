@@ -3,7 +3,7 @@ package com.example.networking;
 import com.google.gson.annotations.SerializedName;
 
 public class Mountain {
-    private String namn;
+     private String name;
 
     //Tillfäligt
     /*
@@ -15,12 +15,12 @@ public class Mountain {
     // Somthing auxdata
 
      */
-    public Mountain(String namn) {
-        this.namn = namn;
+    public Mountain(String name) {
+        this.name= name;
     }
 
-    public String getNamn(){
-        return this.namn;
+    public String getName(){
+        return this.name;
     }
 }
 
