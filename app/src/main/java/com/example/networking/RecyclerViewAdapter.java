@@ -1,5 +1,6 @@
 package com.example.networking;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.name.setText(items.get(position).getNamn());
+        holder.name.setText(items.get(position).getName());
     }
 
     @Override
@@ -55,5 +56,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public interface OnClickListener {
         void onClick(Mountain item);
+    }
+
+    public void update(List<Mountain> listOfMountains) {
+        items.clear();
+        items.addAll(listOfMountains);
     }
 }
