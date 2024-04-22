@@ -9,6 +9,7 @@ public class Mountain {
     private int heightInMeters;
     @SerializedName("cost")
     private int heightinFeet;
+    private Auxdata auxdata;
 
     public Mountain(String name) {
         this.name= name;
@@ -28,6 +29,10 @@ public class Mountain {
 
     public int getHeightinFeet() {
         return heightinFeet;
+    }
+
+    public Auxdata getAuxdata() {
+        return auxdata;
     }
 }
 
