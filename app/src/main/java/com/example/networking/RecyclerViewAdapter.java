@@ -31,7 +31,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.name.setText(items.get(position).getName());
+        holder.name.setText("Mountain name: " + items.get(position).getName());
+        holder.location.setText("Location: " + items.get(position).getLocation());
+        holder.meters.setText("Height: " + items.get(position).getHeightInMeters() + " Meters");
+        holder.feet.setText( + items.get(position).getHeightinFeet() + " Feet");
     }
 
     @Override
@@ -41,11 +44,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name;
+        TextView location;
+        TextView meters;
+        TextView feet;
 
         ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
             name = itemView.findViewById(R.id.nameView);
+            location = itemView.findViewById(R.id.locationView);
+            meters = itemView.findViewById(R.id.metersView);
+            feet = itemView.findViewById(R.id.feetView);
         }
 
         @Override

@@ -4,23 +4,30 @@ import com.google.gson.annotations.SerializedName;
 
 public class Mountain {
      private String name;
-
-    //Tillfäligt
-    /*
      private String location;
     @SerializedName("size")
     private int heightInMeters;
     @SerializedName("cost")
     private int heightinFeet;
-    // Somthing auxdata
 
-     */
     public Mountain(String name) {
         this.name= name;
     }
 
     public String getName(){
         return this.name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public int getHeightInMeters() {
+        return heightInMeters;
+    }
+
+    public int getHeightinFeet() {
+        return heightinFeet;
     }
 }
 
