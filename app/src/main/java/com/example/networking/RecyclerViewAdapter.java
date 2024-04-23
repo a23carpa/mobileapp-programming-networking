@@ -41,8 +41,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         String image = items.get(position).getAuxdata().getImg();
-        Log.i("==!", image);
+
         Picasso.get().load(image).into(holder.image);
+
         holder.name.setText(items.get(position).getName());
         holder.location.setText(items.get(position).getLocation());
         holder.meters.setText(items.get(position).getHeightInMeters() + " Meters");

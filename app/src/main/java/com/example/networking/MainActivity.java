@@ -29,11 +29,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        list = new ArrayList<>(Arrays.asList(
-                new Mountain("XX"),
-                new Mountain("Mont Blanc"),
-                new Mountain("Denali")
-        ));
+        list = new ArrayList<>();
 
          adapter = new RecyclerViewAdapter(this, list, new RecyclerViewAdapter.OnClickListener() {
             @Override
@@ -47,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         view.setAdapter(adapter);
 
         gson = new Gson();
-        //new JsonTask(this).execute(JSON_URL);
-        new JsonFile(this, this).execute(JSON_FILE);
+        //new JsonFile(this, this).execute(JSON_FILE);
+        new JsonTask(this).execute(JSON_URL);
 
     }
 
