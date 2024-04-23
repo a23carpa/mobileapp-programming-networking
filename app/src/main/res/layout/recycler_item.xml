@@ -21,6 +21,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:text=""
+        android:textColor="#000000"
         android:textSize="25dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +31,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:text=""
+        android:textColor="#000000"
         android:textSize="25dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/nameView" />
@@ -39,6 +41,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:text=""
+        android:textColor="#000000"
         android:textSize="25dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/locationView" />
@@ -48,6 +51,7 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:text=""
+        android:textColor="#000000"
         android:textSize="25dp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/metersView" />
