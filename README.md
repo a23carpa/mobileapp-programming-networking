@@ -5,8 +5,8 @@ I denna assignment har jag skapat en recycler view i main aktiviteten. Denna rec
 Dessa object skapas utifrån data hämnat i JSON format [från](https://mobprog.webug.se/json-api?login=brom).
 Genom medkomna classer kan den hämntade datan omvandlas till object och sedan skickas till recycler view adaptern för att visas.
 
-Koden nedanför visar del av prossen för att skapa en lista av "Mountain object baserad på den data som hämntats från nätet i JSON format.
-Detta görs genom GSON. 
+Koden nedanför visar en del av prosessen för att skapa en lista av "Mountain" object baserad på den data som hämntats från nätet i JSON format.
+Detta görs genom GSON. Den nya listan skickas då adaptern som i sig updateras och visar den nya datan.
 
 ```
     Type type = new TypeToken<List<Mountain>>() {}.getType();
